@@ -1,7 +1,6 @@
 package listeners;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
@@ -35,7 +34,11 @@ public class Report extends MobileListenerAdapter {
     private static final LocalDate DATE = LocalDate.now();
     public static final Logger QA_LOGGER = Logger.getLogger("QALogger");
 
-    private AppiumDriver<MobileElement> driver;
+    private AppiumDriver driver;
+
+    public AppiumDriver getDriver() {
+        return driver;
+    }
 
     public static String timeStampEvd() {
         return new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date());

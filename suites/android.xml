@@ -3,7 +3,7 @@
 <suite name="app-veiculos" parallel="tests" thread-count="1">
 
     <test name="Samsung Galaxy S22">
-        <parameter name="sessionJson" value="src/test/resources/capabilities-android.json"/>
+        <parameter name="sessionJson" value="src/test/resources/capabilities-android-local.json"/>
         <classes>
             <class name="tests.FinanciamentoVeiculosTest"/>
         </classes>

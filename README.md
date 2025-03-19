@@ -14,6 +14,8 @@ https://gitlab.com/rodrigo.qa/outsera-automation-mobile-test
 Para execução do projeto, é necessário possuir as seguintes instalações na máquina:
 - Java 17 ou superior;
 - Maven
+- appium install
+- appium driver install uiautomator2
 
 
 ## Tecnologias e Bibliotecas

@@ -1,7 +1,6 @@
 package setup;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,13 +12,14 @@ import java.io.File;
 
 
 public class Setup {
-    public AppiumDriver<MobileElement> driver;
+    public AppiumDriver driver;
 
     @BeforeMethod(alwaysRun = true)
     @Parameters("sessionJson")
-    public void deveriaInicializarASessaoAndroid(@Optional("default") String sessionJson, ITestContext context) {
+    public void deveriaInicializarASessaoAndroid(@Optional("value") String sessionJson, ITestContext context) {
 
-        driver = new AppiumSessionFactory(new File(sessionJson)).getSession();
+         driver = new AppiumSessionFactory().getSession(new File("src/test/resources/capabilities-android-local.json"));
+
         context.setAttribute("AppiumDriver", driver);
     }
 

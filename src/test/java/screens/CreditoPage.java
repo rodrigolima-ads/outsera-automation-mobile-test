@@ -1,70 +1,75 @@
 package screens;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 public class CreditoPage extends BasePage {
-    public CreditoPage(AppiumDriver<MobileElement> driver) {
+    public CreditoPage(AppiumDriver driver) {
         super(driver);
-        this.wait = new WebDriverWait(driver, 10L);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     // Acessa Crédito
     @iOSXCUITFindBy(accessibility = "Crédito")
     @AndroidFindBy(accessibility = "Crédito")
-    public MobileElement credito;
+    public AppiumBy credito;
     @iOSXCUITFindBy(accessibility = "Crédito")
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Nova simulação']")
-    public MobileElement novaSimuacao;
+    public AppiumBy novaSimuacao;
 
     // Financiamento de Veículos
     @iOSXCUITFindBy(accessibility = "Crédito")
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Financiamento de veículos leves']")
-    public MobileElement financiamentoDeVeiculo;
+    public AppiumBy financiamentoDeVeiculo;
     @iOSXCUITFindBy(accessibility = "Crédito")
     @AndroidFindBy(id = "vab_button")
-    public MobileElement nextButton;
+    public AppiumBy nextButton;
     @iOSXCUITFindBy(accessibility = "OK")
     @AndroidFindBy(id = "ok_button")
-    public MobileElement btnOk;
+    public AppiumBy btnOk;
     @iOSXCUITFindBy(accessibility = "Carro")
     @AndroidFindBy( xpath = "//android.widget.TextView[@text='Carro']")
-    public MobileElement tipoveiculoCarro;
+    public AppiumBy tipoveiculoCarro;
     @iOSXCUITFindBy(accessibility = "Novo (0 Km)")
     @AndroidFindBy( xpath = "//android.widget.TextView[@text='Novo (0 Km)']")
-    public MobileElement modeloZeroKm;
+    public AppiumBy modeloZeroKm;
     @iOSXCUITFindBy(accessibility = "Estado onde será emplacado")
     @AndroidFindBy( id = "br.com.app.app.internal:id/aCarFinancingPreview_StatesTis")
-    public MobileElement estadoEmplacado;
+    public AppiumBy estadoEmplacado;
     @iOSXCUITFindBy(accessibility = "Paraná (PR)")
     @AndroidFindBy( xpath = "//android.widget.TextView[@text='Paraná (PR)']")
-    public MobileElement estadoPR;
+    public AppiumBy estadoPR;
     @iOSXCUITFindBy(accessibility = "Preço de compra")
     @AndroidFindBy( id = "br.com.app.app.internal:id/carfinancing_vehicle_data_buy_value_edit_text")
-    public MobileElement precoCompra;
+    public AppiumBy precoCompra;
     @iOSXCUITFindBy(accessibility = "Avançar")
     @AndroidFindBy( id = "br.com.app.app.internal:id/aCarFinancingPreSimulation_btNext")
-    public MobileElement avancaDados;
+    public WebElement avancaDados;
     @iOSXCUITFindBy(accessibility = "Buscar marca")
     @AndroidFindBy( id = "br.com.app.app.internal:id/aCarFinancingFindVehicleModel_tietBrand")
-    public MobileElement marcaCarro;
+    public AppiumBy marcaCarro;
     @iOSXCUITFindBy(accessibility = "Buscar marca")
     @AndroidFindBy( id = "br.com.app.app.internal:id/auto_complete_text_selection_brand")
-    public MobileElement carroInsere;
+    public AppiumBy carroInsere;
     @iOSXCUITFindBy(accessibility = "Buscar modelo e versão")
     @AndroidFindBy( id = "br.com.app.app.internal:id/aCarFinancingFindVehicleModel_btNext")
-    public MobileElement avancaModelo;
+    public AppiumBy avancaModelo;
     @iOSXCUITFindBy(accessibility = "Avançar")
     @AndroidFindBy( id = "br.com.app.app.internal:id/aCarFinancingCheckoutSimulation_btNext")
-    public MobileElement avancaSimulacao;
+    public AppiumBy avancaSimulacao;
     @AndroidFindBy( id = "br.com.app.app.internal:id/autocomplete_item_text")
-    public MobileElement carroClique;
+    public AppiumBy carroClique;
     @AndroidFindBy( id = "br.com.app.app.internal:id/aCarFinancingFindVehicleModel_tietModelYear")
-    public MobileElement modeloCarro;
+    public AppiumBy modeloCarro;
     @AndroidFindBy( xpath = "//android.widget.TextView[@text='Conheça o seguro tranquilidade financeira']")
-    public MobileElement successMessage;
+    public WebElement successMessage;
 
 }

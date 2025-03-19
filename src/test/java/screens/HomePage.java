@@ -1,33 +1,35 @@
 package screens;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class HomePage extends BasePage {
-    public HomePage(AppiumDriver<MobileElement> driver) {
+    public HomePage(AppiumDriver driver) {
         super(driver);
-        this.wait = new WebDriverWait(driver, 10L);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @AndroidFindBy(id = "br.com.app.internal:id/aHome_lTabMenu")
-    public MobileElement menuPrincipal;
+    public AppiumBy menuPrincipal;
     @AndroidFindBy(id = "navbar_end_icon")
-    public MobileElement closeIcon;
+    public AppiumBy closeIcon;
     @AndroidFindBy(id = "br.com.app.internal:id/navbar_end_icon")
     @iOSXCUITFindBy(accessibility = "Fechar")
-    public MobileElement fechar;
+    public AppiumBy fechar;
     @AndroidFindBy(id = "br.com.app.internal:id/aDSFeedback_bPrimary")
     @iOSXCUITFindBy(accessibility = "Entendi")
-    public MobileElement ativEntendi;
+    public AppiumBy ativEntendi;
     @AndroidFindBy(id = "fHomeDashboard_blMenuShortcut")
     @iOSXCUITFindBy(accessibility = " Menu")
-    public MobileElement mainMenuBtn;
+    public AppiumBy mainMenuBtn;
     @iOSXCUITFindBy(accessibility = "Crédito")
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Crédito']")
-    public MobileElement menuCredits;
+    public AppiumBy menuCredits;
 
 
 }

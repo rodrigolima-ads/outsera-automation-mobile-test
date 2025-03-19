@@ -1,9 +1,6 @@
 {
-  "device": "Samsung Galaxy S10_1",
-  "os_version": 11.0,
-  "platform": "android",
-  "app": "homolog-protected.apk",
-  "build": "{BS_LOCAL_IDENTIFIER}-android",
-  "autoGrantPermissions": true,
-  "url": "http://127.0.0.1:4723/wd/hub"
+  "appium:automationName": "UIAutomator2",
+  "appium:deviceName": "emulator-5554",
+  "appium:app": "app-homolog.apk"
+
 }
