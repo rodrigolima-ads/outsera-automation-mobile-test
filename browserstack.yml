@@ -1,0 +1,24 @@
+userName: yourusername
+accessKey: token
+framework: testng
+app: bs://5e384aaa2f6058b261dd14848afe46c12ba080cf
+browserstackLocal: true
+autoGrantPermissions: true
+deviceName: Samsung Galaxy S22
+platforms:
+  - platformName: android
+    deviceName: Samsung Galaxy S22
+    platformVersion: 12.0
+#  - platformName: android
+#    deviceName: Google Pixel 7 Pro
+#    platformVersion: 13.0
+#  - platformName: android
+#    deviceName: Samsung Galaxy S23
+#    platformVersion: 13.0
+parallelsPerPlatform: 1
+
+projectName: BrowserStack Veiculos
+
+testObservability: true
+
+source: java:appium-intellij:v1.1.2

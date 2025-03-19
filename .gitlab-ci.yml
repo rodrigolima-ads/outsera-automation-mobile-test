@@ -1,0 +1,15 @@
+stages:
+  - functional
+
+default:
+  image: maven:3.6.3-jdk-11-slim
+
+  artifacts:
+    when: always
+    expire_in: 3 days
+    paths:
+      - build/*
+
+functional:
+  stage: functional
+  script: mvn clean test -DsuiteXmlFile=suites/android.xml -DincludeTags='financiament' -Denv=$ENV
