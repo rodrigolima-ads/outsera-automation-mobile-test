@@ -4,10 +4,7 @@
   "platform": "IOS",
   "platformName": "IOS",
   "automationName": "XCuiTest",
-  "build": "{BS_LOCAL_IDENTIFIER}-ios",
   "app": "digitalautomatio2/app_ios_release_latest",
   "autoAcceptAlerts": true,
-  "fullReset": true,
-  "browserstack.local": true,
-  "url": "http://token@hub-cloud.browserstack.com/wd/hub"
+  "fullReset": true
 }

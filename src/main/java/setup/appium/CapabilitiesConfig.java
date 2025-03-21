@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class CapabilitiesConfig {
 
-    public DesiredCapabilities setCapabilities(Map<String, Object> jsonMap) {
+    public static DesiredCapabilities setCapabilities(Map<String, Object> jsonMap) {
         DesiredCapabilities capability = new DesiredCapabilities();
         jsonMap.forEach(capability::setCapability);
         return capability;

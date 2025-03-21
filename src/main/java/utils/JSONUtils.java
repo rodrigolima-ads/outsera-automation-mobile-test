@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class JSONUtils {
 
-    public static Map fromJSONToMap(File jsonPath) {
+    public static Map<String, Object> fromJSONToMap(File jsonPath) {
         JSONParser jsonParser = new JSONParser();
 
         try {

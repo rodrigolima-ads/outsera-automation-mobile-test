@@ -4,9 +4,7 @@
   "platform": "android",
   "platformName": "Android",
   "automationName": "UIAutomator2",
-  "build": "{BS_LOCAL_IDENTIFIER}-android",
   "app": "digitalautomatio2/android_release_latest",
-  "autoGrantPermissions": "true",
-  "browserstack.local": true,
-  "url": "http://token@hub-cloud.browserstack.com/wd/hub"
+  "autoGrantPermissions": true
+
 }
